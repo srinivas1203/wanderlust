@@ -31,8 +31,7 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
 app.get("/",  (req , res ) => {
-    console.log("u visted root");
-  
+    res.send("u visted root");
 })
 
     // index route//
