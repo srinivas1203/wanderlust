@@ -64,15 +64,15 @@ app.get("/listings", wrapAsync(async (req, res)=>{
     // show route //
     app.get("/listings/:id", wrapAsync(  async (req,res)=>{
         let {id} = req.params;
-        const listing = await listing.findById(id);
-        res.render("listings/show.ejs",{listing});
+        const Listing = await listing.findById(id);
+        res.render("listings/show.ejs",{Listing});
     }))
 
     // edit route // 
     app.get("/listings/:id/edit", wrapAsync (async(req, res)=>{
         let {id} = req.params;
-        const listing = await listing.findById(id);
-        res.render("listings/edit.ejs", {listing});
+        const Listing = await listing.findById(id);
+        res.render("listings/edit.ejs", {Listing});
 
     }))
 
